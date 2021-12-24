@@ -18,7 +18,6 @@ Inventory.init(
     item: {
       type: DataTypes.STRING,
       allowNull: false,
-      defaultValue: "unidentified item",
     },
     location_id: {
       type: DataTypes.INTEGER,

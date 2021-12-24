@@ -16,7 +16,6 @@ Location.init(
     location_name: {
       type: DataTypes.STRING,
       allowNull: false,
-      defaultValue: "No Location Assigned",
     },
   },
   {
