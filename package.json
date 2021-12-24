@@ -1,0 +1,31 @@
+{
+  "name": "demand-planning-tool",
+  "version": "1.0.0",
+  "description": "A demand planning tool used to help companies calculate procurement quantities based on inventory management parameters.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "seed": "node src/seeds/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/conorjkelly96/demand-planning-tool.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/conorjkelly96/demand-planning-tool/issues"
+  },
+  "homepage": "https://github.com/conorjkelly96/demand-planning-tool#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "inquirer": "^8.2.0",
+    "mysql2": "^2.3.3",
+    "sequelize": "^7.0.0-alpha.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
