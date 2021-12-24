@@ -1,5 +1,7 @@
 const { Model, DataTypes } = require("sequelize");
 
+const Location = require("./Inventory");
+
 const sequelize = require("../config/connection.js");
 
 class Inventory extends Model {}
@@ -16,10 +18,16 @@ Inventory.init(
     item: {
       type: DataTypes.STRING,
       allowNull: false,
+      defaultValue: "unidentified item",
     },
     location_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      defaultValue: 1,
+      references: {
+        model: Location,
+        key: "id",
+      },
     },
     safety_stock: {
       type: DataTypes.INTEGER,
@@ -39,7 +47,7 @@ Inventory.init(
     timestamps: false,
     freezeTableName: true,
     underscored: false,
-    modelName: "Inventory",
+    modelName: "inventory",
   }
 );
 

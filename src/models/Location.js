@@ -16,6 +16,7 @@ Location.init(
     location_name: {
       type: DataTypes.STRING,
       allowNull: false,
+      defaultValue: "No Location Assigned",
     },
   },
   {
@@ -23,7 +24,7 @@ Location.init(
     timestamps: false,
     freezeTableName: true,
     underscored: false,
-    modelName: "Location",
+    modelName: "location",
   }
 );
 

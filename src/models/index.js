@@ -3,12 +3,12 @@ const Location = require("./Inventory");
 const Inventory = require("./Location");
 
 // Products belongsTo Category
-Inventory.belongsToMany(Location, {
+Inventory.belongsTo(Location, {
   foreignKey: "location_id",
   onDelete: "CASCADE",
 });
 
-// Categories have many Products
+// Products belongsTo Category
 Location.hasMany(Inventory, {
   foreignKey: "location_id",
 });
